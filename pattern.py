@@ -3,15 +3,16 @@ import random
 import sys
 import time
 start = time. time()
-n = int(input("please enter and even number greater than 2"))
+
+n = int(input("Please enter an even number greater than 2"))
 if(n == 2 or n % 2 != 0):
-    print("please enter and even number greater than 2")
+    print("Please enter an even number greater than 2")
     sys.exit()
 else:
-    arr = [[random.randrange(20) for i in range(n)] for j in range(n)]
+    arr = [[random.randrange(100) for i in range(n)] for j in range(n)]
 
 print(arr)
-print("\nanswer")
+print("\nAnswer")
 
 
 def set_cordinates():
@@ -60,7 +61,7 @@ def print_diagnol(x1, y1, x2, y2, x3, y3, x4, y4):
 set_cordinates()
 upper_arr_count = math.floor(n/2)
 while(upper_arr_count):
-    print("Upper matrix", upper_arr_count)
+    # print("Upper matrix", upper_arr_count)
     print_diagnol(x1, y1, x2, y2, x3, y3, x4, y4)
     x1 -= 1
     y2 += 1
@@ -75,7 +76,7 @@ y3 += 1
 x4 += 1
 lower_arr_count = math.floor(n/2)-1
 while(lower_arr_count):
-    print("Lower matrix", lower_arr_count)
+    # print("Lower matrix", lower_arr_count)
     print_diagnol(x1, y1, x2, y2, x3, y3, x4, y4)
     y1 -= 1
     x2 -= 1
